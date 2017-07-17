@@ -1,0 +1,22 @@
+<div  fxLayoutAlign="center"  fxLayout="row">
+  <div class="container" class.sm="container-md" class.xs="container-xs">
+    <img src="../../assets/logotest.png" alt="Logo">
+    <span class="top">Sign In</span>
+    <input [(ngModel)]="user.email" type="email" placeholder="Email" required>
+    <input [(ngModel)]="user.password" type="password" placeholder="Password" required>
+    <button  md-raised-button class="sign-in" (click)="signIn()">
+      Sign In
+    </button>
+    <span class="line"><hr></span>
+      <span class="or">or</span>
+      <span class="line"><hr></span>
+    <button md-raised-button class="sign-google">
+      <i class="fa fa-google" aria-hidden="true"></i>
+      Sign in with Google
+    </button>
+    <p class="already">
+      Don't have an account?
+       <span [routerLink]="['/sign-up']">Sign up</span>
+    </p>
+  </div>
+</div>

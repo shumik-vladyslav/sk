@@ -1,0 +1,112 @@
+.wrapper{
+  background-color: #282759;
+  padding: 0 20px;
+  height: 120vh;
+}
+.header{
+  padding: 16px 50px;
+  color: white;
+  border-bottom: 1px solid #4F4E77;
+  z-index: 10;
+}
+.header span {
+  display: inline;
+}
+.header span:first-child{
+  float: left;
+}
+.header span:nth-child(2){
+  float: right;
+  padding-top: 15px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+.text{
+  color: white;
+  background-color: #282759;
+  margin-top: 50px;
+}
+.text p {
+  text-align: left;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+.text p span{
+  display: block;
+}
+.form{
+  background-color: #282759;
+
+}
+.form .container{
+  width: 50%;
+}
+.form .container-xs{
+  width: 100%;
+}
+.form .container-sm{
+  width: 80%;
+}
+.form .top{
+  color: white;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  display: block;
+  font-size: 20px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+.top{
+  display: block;
+  margin-bottom: 40px;
+}
+.or{
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 10%;
+  color: #B6B2B1;
+  vertical-align: top;
+  text-align: center;
+}
+.line{
+  width: 43%;
+  display: inline-block;
+  color: #B6B2B1;
+}
+input{
+  width:100%;
+  display: block;
+  height: 46px;
+  background-color: #3A396E;
+  border: 1px solid #5C5B98 ;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  color: #8d8d8d;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+button{
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 0;
+  height: 46px;
+}
+button i {
+  float: left;
+  border-right: 0.5px solid #3267c6;
+  font-size: 23px;
+  margin-top: 3px;
+  margin-right: 1px;
+  margin-left: 5px;
+  padding: 3px 7px;
+}
+.sign-in{
+  background-color: #2BB2B6;
+}
+.sign-google{
+  background-color: #3E82F7;
+  padding-right: 20px;
+}
