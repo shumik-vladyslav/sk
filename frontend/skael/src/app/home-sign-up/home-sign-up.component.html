@@ -14,12 +14,15 @@
     <div class="form"  fxFlex.gt-sm="50%" fxFlex.xs="100" fxLayoutAlign="center none" fxLayout="row">
       <div class="container" class.xs="container-xs"class.sm="container-md">
         <span class="top">Sign Up</span>
-        <input [(ngModel)]="user.username" type="text" placeholder="Full name" required>
-        <input [(ngModel)]="user.email" type="email" placeholder="Email" required>
-        <input [(ngModel)]="user.password" type="password" placeholder="Password" required>
-        <button  md-raised-button class="sign-in" (click)="signUp()">
-          Sign Up
-        </button>
+        <form [formGroup]="myForm"
+              (ngSubmit)=onSubmit(myForm.value)>
+          <input [(ngModel)]="user.username" type="text" placeholder="Full name" id="username" [formControl]="username" [class.error]='!username.valid && username.touched' required>
+          <input [(ngModel)]="user.email" type="email" placeholder="Email"  [class.error]='!email.valid && email.touched'  id="email" [formControl]="email" required>
+          <input [(ngModel)]="user.password" type="password" placeholder="Password" minlength="6" [class.error]='!password.valid && password.touched' placeholder="Password" required id="password" [formControl]="password" required>
+          <button md-raised-button class="sign-in" [disabled]=!myForm.valid  (click)="signUp()">
+            Sign Up
+          </button>
+        </form>
         <span class="line"><hr color="#4F4E77"></span>
         <span class="or">or</span>
         <span class="line"><hr color="##4F4E77"></span>

@@ -2,18 +2,21 @@
   <div class="container" class.sm="container-md" class.xs="container-xs">
     <img src="../../assets/logotest.png" alt="Logo">
     <span class="top">Sign In</span>
-    <input [(ngModel)]="user.email" type="email" placeholder="Email" required>
-    <input [(ngModel)]="user.password" type="password" placeholder="Password" required>
-    <button  md-raised-button class="sign-in" (click)="signIn()">
-      Sign In
-    </button>
-    <span class="line"><hr></span>
+    <form [formGroup]="myForm"
+          (ngSubmit)=onSubmit(myForm.value)>
+      <input [(ngModel)]="user.email" type="email" placeholder="Email" [class.error]='!email.valid && email.touched'  id="email" [formControl]="email"  required>
+      <input [(ngModel)]="user.password" type="password" minlength="6" [class.error]='!password.valid && password.touched' placeholder="Password" required id="password" [formControl]="password">
+      <button  md-raised-button class="sign-in" type="submit" [disabled]=!myForm.valid  (click)="signIn()">
+        Sign In
+      </button>
+      <span class="line"><hr></span>
       <span class="or">or</span>
       <span class="line"><hr></span>
-    <button md-raised-button class="sign-google">
-      <i class="fa fa-google" aria-hidden="true"></i>
-      Sign in with Google
-    </button>
+      <button md-raised-button class="sign-google">
+        <i class="fa fa-google" aria-hidden="true"></i>
+        Sign in with Google
+      </button>
+    </form>
     <p class="already">
       Don't have an account?
        <span [routerLink]="['/sign-up']">Sign up</span>

@@ -15,6 +15,7 @@ import {SignInService} from "./shared/service/sign-in.service";
 import {SignUpService} from "./shared/service/sign-up.service";
 import {DumpData} from "./shared/service/dumpData";
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MaterialModules,
     FlexLayoutModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [SignUpService, SignInService, DumpData],

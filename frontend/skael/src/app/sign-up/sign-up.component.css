@@ -19,6 +19,12 @@
   font-family: Roboto,"Helvetica Neue",sans-serif;
   margin-top: 100px;
 }
+button:disabled{
+  cursor: not-allowed;
+}
+.error{
+  border: 1px solid red;
+}
 .or{
   margin-bottom: 20px;
   display: inline-block;
