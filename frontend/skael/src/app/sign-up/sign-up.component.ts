@@ -51,8 +51,10 @@ export class SignUpComponent implements OnInit {
 
   signUp() {
     console.log(this.user);
-    this.signUpService.signUp(this.user);
-    this.router.navigate(['/sign-in']);
+    this.signUpService.signUp(this.user).subscribe((res) => {
+        console.log(res.json());
+      this.router.navigate(['/sign-in']);
+    });
   }
 
 }
