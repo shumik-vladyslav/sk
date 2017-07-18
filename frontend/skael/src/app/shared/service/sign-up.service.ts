@@ -9,9 +9,9 @@ export class SignUpService {
   constructor(private http: Http, private DumpData: DumpData) {}
 
   public signUp(authUser: AuthUser) {
-    // this.http.get('http://104.236.176.86/api/hello').subscribe((rest) => {
-    //   console.log(rest)
-    // })
+    this.http.get('http://104.236.176.86/api/hello').subscribe((rest) => {
+      console.log(rest)
+    });
     return this.http.post(AppSettings.API_ENDPOINT + '/users/', authUser);
   }
 }
