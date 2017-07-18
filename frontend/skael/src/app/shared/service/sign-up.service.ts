@@ -12,6 +12,6 @@ export class SignUpService {
     // this.http.get('http://104.236.176.86/api/hello').subscribe((rest) => {
     //   console.log(rest)
     // })
-    return this.http.get(AppSettings.API_ENDPOINT + '/users', authUser);
+    return this.http.post(AppSettings.API_ENDPOINT + '/users', authUser);
   }
 }
